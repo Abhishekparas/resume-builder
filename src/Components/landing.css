@@ -1,0 +1,44 @@
+.landing-content{
+    width: 700px;
+    margin-left: 350px;
+    margin-top: 50px;
+    /* background: chartreuse; */
+}
+
+.landing-img{
+}
+
+.landing-img img{
+    object-fit: contain;
+    width: 500px;
+    height: 300px;
+    margin-left: 110px;
+    margin-top: 30px;
+}
+
+#landing-btn{
+    width: 200px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 250px;
+    /* background: white; */
+    /* border-radius: 3px; */
+    height: 40px;
+    transition: all .4s ease;
+    box-shadow: -3px 3px #03a600, -2px 2px #03a600, -1px 1px #03a600;
+    border: 1px solid #03a600;
+}
+
+#landing-btn{
+    /* color: white; */
+}
+
+#heading{
+    text-align: center;
+}
+
+#p-tag{
+    margin-left: 40px;
+    font-size: 20px;
+}
