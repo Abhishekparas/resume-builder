@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import About from './Components/About';
+import Contact from './Components/contact';
 import Header from './Components/Header';
 import Landing from './Components/Landing';
 import Register from './Components/register';
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path="/signIn" exact>
           <Sign></Sign>
+        </Route>
+        <Route path="/contact" exact>
+          <Contact></Contact>
         </Route>
       </Switch>
         

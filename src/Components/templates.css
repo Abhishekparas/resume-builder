@@ -1,0 +1,149 @@
+.template-content {
+  margin-left: 30px;
+  margin-top: 70px;
+  width: 1300px;
+  height: 500px;
+  /* background: chartreuse; */
+}
+
+.template-header {
+}
+
+#template-heading {
+  font-size: 40px;
+  margin-left: 300px;
+}
+
+#template-p {
+  font-size: 20px;
+  margin-left: 400px;
+}
+
+.template-img {
+  /* background: chocolate; */
+  width: 1100px;
+  height: 350px;
+  margin-left: 100px;
+  display: flex;
+}
+
+.img-1 {
+  height: 300px;
+  width: 200px;
+  /* background: red; */
+  margin-left: 90px;
+  position: relative;
+}
+
+.img-2 {
+  height: 300px;
+  width: 200px;
+  /* background: red; */
+  margin-left: 40px;
+  position: relative;
+}
+
+.img-3 {
+  height: 300px;
+  width: 200px;
+  /* background: red; */
+  margin-left: 40px;
+  position: relative;
+}
+
+.img-4 {
+  height: 300px;
+  width: 200px;
+  /* background: red; */
+  margin-left: 40px;
+  position: relative;
+}
+
+.img-1 img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-2 img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-3 img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-4 img {
+  height: 100%;
+  width: 100%;
+}
+
+.img-1:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+
+.img-2:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.img-3:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.img-4:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.template-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  cursor: pointer;
+  background: rgba(210, 255, 82, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(145, 232, 66, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(210, 255, 82, 1)),
+    color-stop(100%, rgba(145, 232, 66, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(145, 232, 66, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(145, 232, 66, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(145, 232, 66, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(145, 232, 66, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=1 );
+}
