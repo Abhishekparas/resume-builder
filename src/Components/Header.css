@@ -46,6 +46,7 @@
     background: #2fbe6e;
     font-size: 20px;
     cursor: pointer;
+    outline: none;
 }
 
 .btn:hover{
@@ -61,6 +62,7 @@
     font-size: 20px;
     background: transparent;
     color: #2fbe6e;
+    outline: none;
 }
 
 .btn-in:hover{

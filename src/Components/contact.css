@@ -1,3 +1,105 @@
 .contact{
     display: flex;
+    margin-top: 50px;
+    margin-left: 5px;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    height: 700px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    /* background: chartreuse; */
+}
+
+.input-group input{
+    height: 40px;
+    border: none;
+    background: #D1FFC3;
+    outline: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.contact-form-details{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form{
+    width: 45%;
+    box-shadow: 0 2px 9px rgba(186, 186, 186, 0.5);
+}
+
+.preview-form{
+    width: 45%;
+    box-shadow: 0 2px 9px rgba(186, 186, 186, 0.5);
+}
+
+.contact-heading{
+    text-align: center;
+}
+
+.preview-heading{
+    text-align: center;
+}
+
+.extend{
+    width: 93%;
+}
+
+.next{
+    margin-top: 20px;
+    /* background: chartreuse; */
+}
+
+.next button{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: lightgreen;
+    border-radius: 5px;
+    /* height: 30px; */
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    color: darkgreen;
+}
+
+.back{
+    margin-top: 20px;
+}
+
+.back button{
+    width: 100%;
+    border: none;
+    outline: none;
+    /* background: lightgreen; */
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    /* height: 30px; */
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    background: transparent;
+    color: green;
+}
+
+.back button:hover{
+    background: lightgreen;
+    color: black;
+    transition: all .4s ease;
+
+}
+
+.next button:hover{
+    color: black;
+    transition: all .4s ease;
+
 }

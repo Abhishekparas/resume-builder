@@ -112,6 +112,7 @@
   position: absolute;
   top: 50%;
   left: 15%;
+  outline: none;
   cursor: pointer;
   background: rgba(210, 255, 82, 1);
   background: -moz-linear-gradient(

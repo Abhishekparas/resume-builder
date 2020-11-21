@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import About from './Components/About';
 import Contact from './Components/contact';
+import Education from './Components/education';
+import Finalize from './Components/finalize';
 import Header from './Components/Header';
 import Landing from './Components/Landing';
 import Register from './Components/register';
@@ -28,8 +30,13 @@ function App() {
         <Route path="/signIn" exact>
           <Sign></Sign>
         </Route>
-        <Route path="/contact" exact>
-          <Contact></Contact>
+        <Route path="/contact" exact component={Contact}>
+        </Route>
+        <Route path="/education" exact>
+          <Education></Education>
+        </Route>
+        <Route path="/finalize" exact>
+          <Finalize></Finalize>
         </Route>
       </Switch>
         

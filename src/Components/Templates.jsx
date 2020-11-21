@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./templates.css";
 
 const Template = () => {
@@ -14,19 +15,19 @@ const Template = () => {
       <div className="template-img">
         <div className="img-1">
           <img src="skin1.svg" alt="" />
-          <button className="template-btn">USE TEMPLATE</button>
+          <Link to="/contact"><button className="template-btn">USE TEMPLATE</button></Link>
         </div>
         <div className="img-2">
           <img src="skin2.svg" alt="" />
-          <button className="template-btn">USE TEMPLATE</button>
+          <Link to="/contact"><button className="template-btn">USE TEMPLATE</button></Link>
         </div>
         <div className="img-3">
           <img src="skin3.svg" alt="" />
-          <button className="template-btn">USE TEMPLATE</button>
+          <Link to="/contact"><button className="template-btn">USE TEMPLATE</button></Link>
         </div>
         <div className="img-4">
           <img src="skin4.svg" alt="" />
-          <button className="template-btn">USE TEMPLATE</button>
+          <Link to="/contact"><button className="template-btn">USE TEMPLATE</button></Link>
         </div>
       </div>
     </div>
