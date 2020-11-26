@@ -35,7 +35,9 @@
 }
 .header-links ul li a:hover{
     color: #2fbe6e;
-    transition: all .4s ease;
+}
+.header-links ul li a:hover .hide{
+    display: flex;
 }
 
 .btn{
@@ -70,4 +72,22 @@
     transition: all .4s ease;
     cursor: pointer;
     color: whitesmoke;
+}
+
+.parent-design{
+    display: flex;
+}
+
+.design{
+    width: 4px;
+    height: 4px;
+    background-color: #2fbe6e;
+    border-radius: 10px;
+    display: flex;
+    padding: 2px;
+    margin: 1px;
+}
+
+.hide{
+    display: none;
 }

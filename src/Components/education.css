@@ -1,0 +1,97 @@
+.education-details{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-around;
+    height: 475px;
+}
+
+.education-1{
+    width: 45%;
+    box-shadow: 0 2px 9px rgba(19, 252, 3, 0.95);
+}
+
+.input-group-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-form{
+    width: 45%;
+}
+
+.education-heading{
+    text-align: center;
+}
+
+.input-group-education{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    /* background: chartreuse; */
+}
+
+.input-group-education input{
+    height: 40px;
+    border: none;
+    background: #D1FFC3;
+    outline: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.extend{
+    width: 93%;
+}
+
+.next-btn{
+    margin-top: 20px;
+}
+
+.next-btn button{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: lightgreen;
+    border-radius: 5px;
+    /* height: 30px; */
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    color: darkgreen;
+}
+
+.back-btn{
+    margin-top: 20px;
+}
+
+.back-btn button{
+    width: 100%;
+    border: none;
+    outline: none;
+    /* background: lightgreen; */
+    border: 2px solid lightgreen;
+    border-radius: 5px;
+    /* height: 30px; */
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px;
+    background: transparent;
+    color: green;
+}
+
+.back-btn button:hover{
+    background: lightgreen;
+    color: black;
+    transition: all .4s ease;
+
+}
+
+.next-btn button:hover{
+    color: black;
+    transition: all .4s ease;
+
+}

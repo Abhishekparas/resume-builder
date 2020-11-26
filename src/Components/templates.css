@@ -79,26 +79,25 @@
   width: 100%;
 }
 
-.img-1:hover {
+.img-1 img:hover {
   opacity: 0.6;
   cursor: pointer;
   transition: all .4s ease;
 }
 
-
-.img-2:hover {
+.img-2 img:hover {
   opacity: 0.6;
   cursor: pointer;
   transition: all .4s ease;
 }
 
-.img-3:hover {
+.img-3 img:hover {
   opacity: 0.6;
   cursor: pointer;
   transition: all .4s ease;
 }
 
-.img-4:hover {
+.img-4 img:hover {
   opacity: 0.6;
   cursor: pointer;
   transition: all .4s ease;
@@ -147,4 +146,10 @@
     rgba(145, 232, 66, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842', GradientType=1 );
+}
+
+.template-btn:hover .special{
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all .4s ease;
 }

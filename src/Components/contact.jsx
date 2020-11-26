@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./contact.css";
 import Preview from "./preview";
+import {connect} from 'react-redux'
 
 class Contact extends Component {
   state = {
@@ -19,7 +20,7 @@ class Contact extends Component {
       pincode: "",
     },
   };
-  
+
   onChangeHandler = (e) => {
     e.preventDefault();
     let id = e.target.id;
@@ -27,8 +28,8 @@ class Contact extends Component {
     this.setState({
       contact: {
         ...this.state.contact,
-        [id]: Value,
-      },
+        [id]: Value
+      }
     });
   };
 
@@ -37,7 +38,7 @@ class Contact extends Component {
   };
 
   render() {
-    let { contact } = this.state;
+    let { contact } = this.props;
     return (
       <div className="contact">
         <div className="contact-form">
@@ -163,11 +164,17 @@ class Contact extends Component {
           <div className="preview-heading">
             <h1>Preview</h1>
           </div>
-          <Preview contact={this.state.contact}></Preview>
+          <Preview contact={this.props.contact}></Preview>
         </div>
       </div>
     );
   }
 }
 
-export default Contact;
+const mapStateToProps = (state) => {
+  return {
+    contact : state.contactDetails
+  }
+};
+
+export default connect(mapStateToProps)(Contact);
