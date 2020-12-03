@@ -1,0 +1,22 @@
+.finalize {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.final-preview {
+  width: 605px;
+  height: 1000px;
+  /* background: orange; */
+  margin-top: 50px;
+  margin-left: 370px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.finalize-img {
+  display: flex;
+  margin-left: 70px;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  /* background: limegreen; */
+  width: 1300px;
+}

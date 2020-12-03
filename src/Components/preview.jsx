@@ -1,24 +1,29 @@
-import React, { Component } from 'react'
-import "./preview.css"
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import "./preview.css";
+import Skin1 from "./skins/skin1";
+import Skin2 from "./skins/skin2";
+import Skin4 from "./skins/skin4";
 
 const Preview = (props) => {
-    console.log(props.contact);
-    let {fName, lName,professionalSummary,Email,phone,profession,street,city,state,country,pincode} = props.contact
-    return (
-        <React.Fragment>
-            <div className="fname">{fName}</div>
-            <div className="lname">{lName}</div>
-            <div className="summary">{professionalSummary}</div>
-            <div className="email">{Email}</div>
-            <div className="phone">{phone}</div>
-            <div className="profession">{profession}</div>
-            <div className="street">{street}</div>
-            <div className="city">{city}</div>
-            <div className="state">{state}</div>
-            <div className="country">{country}</div>
-            <div className="pincode">{pincode}</div>
-        </React.Fragment>
-    );
+  // console.log(props.contact);
+
+  let skinCode = props.skinCode;
+
+  return (
+    <React.Fragment>
+      {skinCode == "skin1" && <Skin1 contact={props.contact} education={props.education}></Skin1>}
+      {skinCode == "skin2" && <Skin2 contact={props.contact} education={props.education}></Skin2>}
+      {skinCode == "skin4" && <Skin4 contact={props.contact} education={props.education}></Skin4>}
+    </React.Fragment>
+  );
+};
+
+const mapStateToProps = (state) => {
+  return{
+    skinCode : state.document.skinCode
+  }
 }
- 
-export default Preview;
+
+
+export default connect(mapStateToProps)(Preview);

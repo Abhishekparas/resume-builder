@@ -1,0 +1,154 @@
+.whole-content-skin2{
+    margin-left: 3px;
+    width: 600px;
+    /* height: 1000px; */
+    margin-top: -60px;
+}
+
+.skin-heading-skin2{
+    display: flex;
+    margin-top: 30px;
+}
+.last-letter{
+    margin-top: 8px;
+    margin-left: 39px;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+.first-letter{
+    margin-top: 3px;
+    margin-left: 7px;
+    font-size: 22px;
+}
+.walker-heading{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.logo-skin2{
+    width: 75px;
+    height: 70px;
+    /* background: rgb(73, 102, 73); */
+    margin-top: 41px;
+    border: 2px solid black;
+}
+
+.big-heading{
+
+    /* background: lime; */
+    display: flex;
+    /* justify-content: ; */
+}
+
+.small-heading-skin2{
+    /* background: blue; */
+    padding: 2px;
+    margin-top: 40px;
+    /* color: gray; */
+    /* display: inline-block; */
+    font-size: 12px;
+    margin-left: 150px;
+    width: 150px;
+}
+
+
+.professional-summary-skin2{
+    margin-top: 10px;
+}
+
+.head-summary{
+    background: lightgray;
+    font-size: 12px;
+    padding: 4px;
+    color: black;
+    font-weight: 700;
+}
+
+.summary{
+    padding: 4px;
+    font-size: 12px;
+}
+
+.all-list{
+    display: flex;
+    padding: 0;
+}
+
+.first-list{
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-left: 0px;
+    font-size: 12px;
+}
+
+.second-list{
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.third-list{
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.skills{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.skills-list{
+}
+
+.experience{
+    margin-top: 30px;
+}
+
+/* .head-experience{
+    background: lightgray;
+    font-size: 12px;
+    padding: 4px;
+    color: black;
+    font-weight: 700;
+} */
+
+.first-position{
+    font-size: 12px;
+}
+.second-position{
+    font-size: 12px;
+}
+.third-position{
+    font-size: 12px;
+}
+
+.special{
+    font-weight: 700;
+}
+
+.date{
+    display: inline;
+    margin-left: 30px;
+}
+
+.education-skin{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.all-positions{
+    margin-left: 3px;
+}
+
+.details{
+    margin-top: 20px;
+    margin-left: 3px;
+}
+.degree{
+    display: inline;
+    font-weight: 700;
+}
+
+.date-education{
+    display: inline;
+    margin-left: 400px;
+    font-weight: 500;
+}

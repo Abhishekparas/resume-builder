@@ -1,8 +1,12 @@
 export const initialState = {
+    auth : {
+        isAuth : false,
+        user : null
+    },
     document : {
         docID  :"12345",
         uID : "1",
-        skinCode : "skin1"
+        skinCode : "skin4"
     },
     contactDetails : {
         
@@ -23,9 +27,9 @@ export const initialState = {
         collegeName:"IPU",
         degree:"IT",
         cgpa:"8.8",
-        city:"New Delhi",
-        state:"Delhi",
+        eduCity:"New Delhi",
+        eduState:"Delhi",
         graduationMonth:"August",
-        graduationYear:"2020"
+        graduationYear:"2022"
     }
 }

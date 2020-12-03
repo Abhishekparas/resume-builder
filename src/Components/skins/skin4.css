@@ -1,0 +1,131 @@
+.whole-content{
+    margin-left: 3px;
+    width: 600px;
+    margin-top: -20px;
+}
+
+.big-heading{
+
+    /* background: lime; */
+}
+
+.small-heading{
+    /* background: blue; */
+    padding: 2px;
+    margin-top: 0px;
+    color: gray;
+    /* display: inline-block; */
+}
+
+.professional-summary-skin{
+    margin-top: 30px;
+}
+
+.head-summary{
+    background: lightgray;
+    font-size: 12px;
+    padding: 4px;
+    color: black;
+    font-weight: 700;
+}
+
+.summary{
+    padding: 4px;
+    font-size: 12px;
+}
+
+.all-list{
+    display: flex;
+    padding: 0;
+}
+
+.first-list{
+    /* display: flex; */
+    /* flex-direction: column; */
+    margin-left: 0px;
+    font-size: 12px;
+}
+
+.second-list{
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.third-list{
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.skills{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.skills-list{
+}
+
+.experience{
+    margin-top: 30px;
+}
+
+/* .head-experience{
+    background: lightgray;
+    font-size: 12px;
+    padding: 4px;
+    color: black;
+    font-weight: 700;
+} */
+
+.first-position{
+    font-size: 12px;
+}
+.second-position{
+    font-size: 12px;
+}
+.third-position{
+    font-size: 12px;
+}
+
+.special{
+    font-weight: 700;
+}
+
+.date{
+    display: inline;
+    margin-left: 40px;
+}
+
+.education-skin{
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.all-positions{
+    margin-left: 3px;
+}
+
+.degree{
+    font-weight: 700;
+}
+
+.date-education{
+    display: inline;
+    margin-left: 380px;
+    font-weight: 500;
+}
+
+.details{
+    margin-top: 20px;
+    margin-left: 3px;
+}
+.education-skin1{
+    margin-top: 30px;
+}
+.education-heading-skin1{
+    text-align: center;
+    font-weight: bold;
+}
+.date-education-skin1{
+    display: inline;
+    margin-left: 198px;
+}

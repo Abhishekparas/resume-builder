@@ -6,19 +6,7 @@ import {connect} from 'react-redux'
 
 class Contact extends Component {
   state = {
-    contact: {
-      fName: "",
-      lName: "",
-      professionalSummary: "",
-      Email: "",
-      phone: "",
-      profession: "",
-      street: "",
-      city: "",
-      state: "",
-      country: "",
-      pincode: "",
-    },
+    contact: this.props.contact
   };
 
   onChangeHandler = (e) => {
@@ -34,11 +22,28 @@ class Contact extends Component {
   };
 
   onSubmitContactHandler = () => {
+    this.props.updateContactDetails(this.state.contact);
     this.props.history.push("/education");
   };
 
+  componentDidMount(){
+    console.log(`Inside component did mount`);
+    console.log(this.props);
+  }
+
+  componentDidUpdate(){
+    console.log(`Inside component did update`);
+    console.log(this.props);
+  }
+
+  componentWillReceiveProps(newProps){
+    console.log(`Inside component will receive props`);
+    console.log(newProps);
+    console.log(this.props);
+  }
+
   render() {
-    let { contact } = this.props;
+    let { contact } = this.state;
     return (
       <div className="contact">
         <div className="contact-form">
@@ -161,10 +166,7 @@ class Contact extends Component {
           </div>
         </div>
         <div className="preview-form">
-          <div className="preview-heading">
-            <h1>Preview</h1>
-          </div>
-          <Preview contact={this.props.contact}></Preview>
+          <Preview contact={contact} education={this.props.education}></Preview>
         </div>
       </div>
     );
@@ -173,8 +175,15 @@ class Contact extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    contact : state.contactDetails
+    contact : state.contactDetails,
+    education : state.educationDetails
   }
 };
 
-export default connect(mapStateToProps)(Contact);
+const mapDispatchToProps = (dispatch) => {
+  return{
+    updateContactDetails : (contactDetails) => {dispatch({type : "UPDATE_CONTACT", contactDetails : contactDetails})}
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Contact);

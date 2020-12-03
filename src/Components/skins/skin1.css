@@ -1,0 +1,52 @@
+.heading-skin1{
+  text-align: center;
+}
+
+.name-heading-skin1{
+  /* text-align: center; */
+  color: #2980b9;
+}
+
+.address-heading-skin1{
+  text-align: center;
+  width: 200px;
+  font-size: 13px;
+  margin-left: 200px;
+}
+.professional-summary-skin1{
+  margin-top: 30px;
+}
+.professional-summary-heading-skin1{
+  text-align: center;
+  font-weight: bold;
+}
+
+.professional-summary-skin1-content{
+font-size: 12px;
+}
+.skills-skin1{
+  margin-top: 30px;
+}
+.skills-heading-skin1{
+  text-align: center;
+  font-weight: bold;
+}
+.experience-heading-skin1{
+  text-align: center;
+  font-weight: bold;
+}
+.date-experience{
+  display: inline;
+}
+.experience-skin1{
+  margin-top: 30px;
+}
+.details-skin1{
+  font-size: 12px;
+  margin-top: 15px;
+}
+.date-education-skin1{
+  display: inline;
+  margin-left: 400px;
+  /* background-color: aquamarine; */
+}

@@ -40,13 +40,10 @@
 .preview-form{
     width: 45%;
     box-shadow: 0 2px 9px rgba(186, 186, 186, 0.5);
+    height: 1037px;
 }
 
 .contact-heading{
-    text-align: center;
-}
-
-.preview-heading{
     text-align: center;
 }
 

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-const Header = () => {
+const Header = (props) => {
+  let { auth } = props;
   return (
     <div className="header">
       <div className="header-img">
@@ -11,43 +13,72 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-links">
-        <ul id="list-links">
-          <li>
-            <Link to="/templates">
-              Resume Templates
-              <div className="parent-design hide">
-                  
-                <div className="design"></div>
-                <div className="design"></div>
-                <div className="design"></div>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/about">
-              About Us
-              <div className="parent-design hide">
-                  
-                <div className="design"></div>
-                <div className="design"></div>
-                <div className="design"></div>
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link to="/register">
-              <button className="btn">Register</button>
-            </Link>
-          </li>
-          <li>
-            <Link to="/signIn">
-              <button className="btn-in">Sign In</button>
-            </Link>
-          </li>
-        </ul>
+        {auth ? (
+          <ul id="list-links">
+            <li>
+              <Link to="/templates">
+                Resume Templates
+                <div className="parent-design hide">
+                  <div className="design"></div>
+                  <div className="design"></div>
+                  <div className="design"></div>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                About Us
+                <div className="parent-design hide">
+                  <div className="design"></div>
+                  <div className="design"></div>
+                  <div className="design"></div>
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                Logout
+                <div className="parent-design hide">
+                  <div className="design"></div>
+                  <div className="design"></div>
+                  <div className="design"></div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul id="list-links">
+            <li>
+              <Link to="/register">
+                <button className="btn">Register</button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/signIn">
+                <button className="btn-in">Sign In</button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about">
+                About Us
+                <div className="parent-design hide">
+                  <div className="design"></div>
+                  <div className="design"></div>
+                  <div className="design"></div>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth.isAuth,
+  };
+};
+
+export default connect(mapStateToProps)(Header);
