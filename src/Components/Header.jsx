@@ -3,6 +3,10 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
+const handleLogout = (logout) => {
+  logout();
+}
+
 const Header = (props) => {
   let { auth } = props;
   return (
@@ -36,7 +40,7 @@ const Header = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/">
+              <Link to="/" onClick = {() => {handleLogout(props.logout)}}>
                 Logout
                 <div className="parent-design hide">
                   <div className="design"></div>
@@ -81,4 +85,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logout : () => {dispatch({type : "LOGOUT"})}
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Header);

@@ -12,30 +12,36 @@ import Skin4 from './Components/skins/skin4';
 import Template from './Components/Templates';
 import Skin2  from './Components/skins/skin2';
 import Skin1 from './Components/skins/skin1';
+import { connect } from 'react-redux';
 
 
-function App() {
+function App(props) {
+  let {auth} = props;
   return (
     <React.Fragment>
       <Header />
       <Switch>
         <Route path="/" exact component={Landing}></Route>
-        <Route path="/templates" exact component={Template}></Route>
+        <Route path="/templates" exact component={auth ? Template : Sign}></Route>
         <Route path="/about" exact component={About}></Route>
-        <Route path="/register" exact component={Register}></Route>
-        <Route path="/signIn" exact component={Sign}></Route>
-        <Route path="/contact" exact component={Contact}></Route>
-        <Route path="/education" exact component={Education}></Route>
-        <Route path="/finalize" exact>
-          <Finalize></Finalize>
-        </Route>
-        <Route path="/skin" exact>
+        <Route path="/register" exact component={auth ? Landing : Register}></Route>
+        <Route path="/signIn" exact component={auth ? Landing: Sign}></Route>
+        <Route path="/contact" exact component={auth ? Contact : Sign}></Route>
+        <Route path="/education" exact component={auth ? Education : Sign}></Route>
+        <Route path="/finalize" exact component={auth ? Finalize : Sign}></Route>
+        {/* <Route path="/skin" exact>
           <Skin1></Skin1> 
-        </Route>
+        </Route> */}
       </Switch>
 
     </React.Fragment>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return{
+    auth: state.auth.isAuth
+  }
+}
+
+export default connect(mapStateToProps)(App);

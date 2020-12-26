@@ -9,7 +9,7 @@ export function myReducer(state = initialState,action){
             }
         }
     }
-    if(action.type == "UPDATE_EDUCATION"){
+    else if(action.type == "UPDATE_EDUCATION"){
         return{
             ...state,
             educationDetails : {
@@ -17,12 +17,21 @@ export function myReducer(state = initialState,action){
             }
         }
     }
-    if(action.type == "CHANGE_SKIN"){
+    else if(action.type == "CHANGE_SKIN"){
         return{
             ...state,
             document : {
                 ...state.document, 
                 skinCode : action.skinCode
+            }
+        }
+    }
+    else if(action.type == "LOGOUT"){
+        return{
+            ...state,
+            auth: {
+                isAuth: false,
+                user: null
             }
         }
     }

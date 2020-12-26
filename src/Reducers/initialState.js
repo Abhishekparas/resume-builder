@@ -1,6 +1,6 @@
 export const initialState = {
     auth : {
-        isAuth : false,
+        isAuth : true,
         user : null
     },
     document : {

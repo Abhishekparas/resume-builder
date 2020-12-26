@@ -3,7 +3,7 @@ import "./about.css";
 
 const About = () => {
   return (
-    <React.Fragment>
+    <div className="about-content">
       <div className="content">
         <p>
           Do you have any comments or questions? Our team will be happy to
@@ -20,7 +20,7 @@ const About = () => {
       <div className="support-img">
           <img src="support.png" alt="support"/>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
