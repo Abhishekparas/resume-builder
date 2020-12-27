@@ -2,9 +2,14 @@ import React, { Component } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
+import { auth } from "../firebase/fbConfig";
+
+
 
 const handleLogout = (logout) => {
-  logout();
+  auth.signOut().then( () => {
+    logout();
+  })
 }
 
 const Header = (props) => {
