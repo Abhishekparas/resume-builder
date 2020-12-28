@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Preview from "./preview";
 import "./finalize.css";
 import { skinCodes } from "../constant/skinCodes";
+import { updateSkin } from "../actions/documentActions";
 
 class Finalize extends Component {
   state = {
@@ -64,7 +65,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    changeSkinCode : (skinCode) => {dispatch({type: "CHANGE_SKIN", skinCode : skinCode})}
+    changeSkinCode : (skinCode) => {dispatch(updateSkin(skinCode))}
   }
 }
 

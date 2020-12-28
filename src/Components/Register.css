@@ -50,7 +50,7 @@
     font-size: 15px;
 }
 
-#confirm-pw{
+#confirmPw{
     height: 40px;
     border: none;
     background: #D1FFC3;
@@ -102,3 +102,22 @@
     background: #4EC528;
     cursor: pointer;
 }
+
+
+#fName{
+    height: 40px;
+    border: none;
+    background: #D1FFC3;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+} 
+
+#lName{
+    height: 40px;
+    border: none;
+    background: #D1FFC3;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+} 

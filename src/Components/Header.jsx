@@ -3,13 +3,14 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { auth } from "../firebase/fbConfig";
+import { logout } from "../actions/authActions";
 
 
 
 const handleLogout = (logout) => {
-  auth.signOut().then( () => {
+  // auth.signOut().then( () => {
     logout();
-  })
+  // })
 }
 
 const Header = (props) => {
@@ -92,7 +93,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout : () => {dispatch({type : "LOGOUT"})}
+    logout : () => {dispatch(logout())}
   }
 }
 

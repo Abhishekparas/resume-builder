@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateSkin } from "../actions/documentActions";
 import { skinCodes } from "../constant/skinCodes";
 import "./templates.css";
 
@@ -56,7 +57,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return{
-    changeSkinCode : (skinCode) => {dispatch({type : "CHANGE_SKIN", skinCode : skinCode})}
+    changeSkinCode : (skinCode) => {dispatch(updateSkin(skinCode))}
   }
 }
 

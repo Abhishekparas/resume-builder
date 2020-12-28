@@ -1,7 +1,8 @@
 export const initialState = {
     auth : {
         isAuth : false,
-        user : null
+        user : null,
+        message : null
     },
     document : {
         docID  :"12345",
