@@ -22,13 +22,13 @@ function App(props) {
       <Header />
       <Switch>
         <Route path="/" exact component={Landing}></Route>
-        <Route path="/templates" exact component={auth ? Template : Sign}></Route>
+        <Route path="/templates" exact component={auth.uid ? Template : Sign}></Route>
         <Route path="/about" exact component={About}></Route>
-        <Route path="/register" exact component={auth ? Landing : Register}></Route>
-        <Route path="/signIn" exact component={auth ? Landing: Sign}></Route>
-        <Route path="/contact" exact component={auth ? Contact : Sign}></Route>
-        <Route path="/education" exact component={auth ? Education : Sign}></Route>
-        <Route path="/finalize" exact component={auth ? Finalize : Sign}></Route>
+        <Route path="/register" exact component={auth.uid ? Landing : Register}></Route>
+        <Route path="/signIn" exact component={auth.uid ? Landing: Sign}></Route>
+        <Route path="/contact" exact component={auth.uid ? Contact : Sign}></Route>
+        <Route path="/education" exact component={auth.uid ? Education : Sign}></Route>
+        <Route path="/finalize" exact component={auth.uid ? Finalize : Sign}></Route>
         {/* <Route path="/skin" exact>
           <Skin1></Skin1> 
         </Route> */}
@@ -40,7 +40,7 @@ function App(props) {
 
 const mapStateToProps = (state) => {
   return{
-    auth: state.auth.isAuth
+    auth: state.firebase.auth
   }
 }
 

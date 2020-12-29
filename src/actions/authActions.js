@@ -3,19 +3,39 @@ import { initialState } from "../Reducers/initialState";
 
 export const login = (userDetails) => {
   return (dispatch,getState,{getFirebase,getFirestore}) => {
-    // now we can do our async tasks here because dispatch is sync function and it gets called 
-    // when the file compiles
+    // !now we can do our async tasks here because dispatch is sync function and it gets called 
+    // !when the file compiles
+    let guid;
+    let guser;
     let firebase = getFirebase();         //auth functions
+    let db = getFirestore();
     firebase.auth().signInWithEmailAndPassword(userDetails.email,userDetails.pw).then(obj => {
       // console.log(obj.user);
+      guid = obj.user.uid;
+      guser = obj.user
+
+      return Promise.all([db.collection("users").doc(guid).get(),db.collection("resumes").doc(guid).get() ]);
+    })
+    .then((combinedUsersAndResumes)=> {
+      let userDoc = combinedUsersAndResumes[0];
+      let resumeDoc = combinedUsersAndResumes[1];
+      if(!userDoc.data()){
+        db.collection("users").doc(guid).set({
+          email : guser.email
+        })
+      }
+      if(!resumeDoc.data()){
+        db.collection("resumes").doc(guid).set(initialState)
+      }
+    })
+    .then(() => {
       dispatch({ type: "LOGIN", userDetails: userDetails })   
-    }).catch(err => {
+    })
+    .catch(err => {
 
       dispatch({type: "LOGIN_FAILED", error: err.message})
       // console.log(err.message);
     })
-
-
   }
 }
 

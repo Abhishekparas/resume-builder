@@ -23,7 +23,7 @@ const Header = (props) => {
         </Link>
       </div>
       <div className="header-links">
-        {auth ? (
+        {auth.uid ? (
           <ul id="list-links">
             <li>
               <Link to="/templates">
@@ -87,7 +87,7 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.auth.isAuth,
+    auth: state.firebase.auth
   };
 };
 

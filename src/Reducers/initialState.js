@@ -5,32 +5,32 @@ export const initialState = {
         message : null
     },
     document : {
-        docID  :"12345",
-        uID : "1",
-        skinCode : "skin4"
+        docID  :"",
+        uID : "",
+        skinCode : ""
     },
     contactDetails : {
         
-        fName:"Abhishek",
-        lName:"Parashar",
-        professionalSummary:"Web Developer",
-        Email:"abhishek@test.com",
-        phone:"9811573749",
-        profession:"Web Developer",
-        street:"Birch Street",
-        city:"New Delhi",
-        state:"Delhi",
-        country:"India",
-        pincode:"110039"
+        fName:"",
+        lName:"",
+        professionalSummary:"",
+        Email:"",
+        phone:"",
+        profession:"",
+        street:"",
+        city:"",
+        state:"",
+        country:"",
+        pincode:""
         
     },
     educationDetails:{
-        collegeName:"IPU",
-        degree:"IT",
-        cgpa:"8.8",
-        eduCity:"New Delhi",
-        eduState:"Delhi",
-        graduationMonth:"August",
-        graduationYear:"2022"
+        collegeName:"",
+        degree:"",
+        cgpa:"",
+        eduCity:"",
+        eduState:"",
+        graduationMonth:"",
+        graduationYear:""
     }
 }
