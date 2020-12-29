@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { signup } from "../actions/authActions";
 import "./Register.css";
 
@@ -7,20 +8,20 @@ class Register extends Component {
   state = {
     fName: "",
     lName: "",
-    email : "",
-    pw : "",
+    emailRegister: "",
+    pwRegister: "",
   };
 
   onChangeHandler = (e) => {
     let value = e.target.value;
     let id = e.target.id;
     this.setState({
-        ...this.state,
-        [id] : value
+      ...this.state,
+      [id]: value
     })
   }
 
-  onSignUpHandler  = (e) => {
+  onSignUpHandler = (e) => {
     e.preventDefault();
     this.props.signUp(this.state);
   }
@@ -28,40 +29,36 @@ class Register extends Component {
   render() {
     return (
       <div className="register">
-        <div className="form-div">
+        <div className="form-div-3">
+          <div className="form-div-2-content">
+            <h1>Welcome Back!</h1>
+            <p>To keep connected with us please login with your personal info</p>
+            <Link to="/signIn" id="remove-under">
+              <div id="ghost-1">SIGN IN</div>
+            </Link>
+          </div>
+        </div>
+        <div className="form-div-register">
           <form>
-            <h1 id="heading">Enter your details</h1>
+            <h1 id="heading">Create Account</h1>
 
-            <div className="email-div">
-              <label htmlFor="fName" id="for-fName">
-                First Name
-              </label>
-              <input type="text" id="fName" value = {this.state.fName} onChange = {(e) => {this.onChangeHandler(e)}}/>
+            <div className="email-div-register">
+              <input type="text" id="fName" placeholder="First Name" value={this.state.fName} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
 
-            <div className="email-div">
-              <label htmlFor="lName" id="for-lName">
-                Last Name
-              </label>
-              <input type="text" id="lName" value = {this.state.lName} onChange = {(e) => {this.onChangeHandler(e)}}/>
+            <div className="email-div-register">
+              <input type="text" id="lName" placeholder="Last Name" value={this.state.lName} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
 
-            <div className="email-div">
-              <label htmlFor="email" id="for-email">
-                E-mail
-              </label>
-              <input type="email" id="email" value = {this.state.email} onChange = {(e) => {this.onChangeHandler(e)}}/>
+            <div className="email-div-register">
+              <input type="email" id="emailRegister" placeholder="Email" value={this.state.emailRegister} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
 
-            <div className="password-div">
-              <label htmlFor="pw" id="for-pw">
-                Password
-              </label>
-              <input type="password" id="pw" value = {this.state.pw} onChange = {(e) => {this.onChangeHandler(e)}} />
+            <div className="password-div-register">
+              <input type="password" id="pwRegister" placeholder="Password" value={this.state.pwRegister} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
-
-            <button type="submit" id="submit-btn" onClick = {(e) => {this.onSignUpHandler(e)}}>
-              Register
+            <button type="submit" id="submit-btn-register" onClick = {(e) => {this.onSignUpHandler(e)}}>
+              SIGN UP
             </button>
           </form>
           <div className="temp-div">
@@ -69,21 +66,22 @@ class Register extends Component {
           </div>
         </div>
       </div>
+
     );
   }
 }
 
 const mapStateToProps = (state) => {
-    return {
-        message : state.auth.message
-    }
+  return {
+    message: state.auth.message
+  }
 }
 
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        signUp : (userDetails) => {dispatch(signup(userDetails))}
-    }
+  return {
+    signUp: (userDetails) => { dispatch(signup(userDetails)) }
+  }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Register);
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

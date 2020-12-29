@@ -26,7 +26,7 @@ const Header = (props) => {
         {auth.uid ? (
           <ul id="list-links">
             <li>
-              <Link to="/templates">
+              <Link to="/templates" id="something-1">
                 Resume Templates
                 <div className="parent-design hide">
                   <div className="design"></div>
@@ -36,7 +36,7 @@ const Header = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/about">
+              <Link to="/about" id="something-2">
                 About Us
                 <div className="parent-design hide">
                   <div className="design"></div>
@@ -46,7 +46,7 @@ const Header = (props) => {
               </Link>
             </li>
             <li>
-              <Link to="/" onClick = {() => {handleLogout(props.logout)}}>
+              <Link to="/" onClick = {() => {handleLogout(props.logout)}} id="something-3">
                 Logout
                 <div className="parent-design hide">
                   <div className="design"></div>
@@ -57,25 +57,25 @@ const Header = (props) => {
             </li>
           </ul>
         ) : (
-          <ul id="list-links">
+          <ul id="list-links-2">
             <li>
-              <Link to="/register">
-                <button className="btn">Register</button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/signIn">
-                <button className="btn-in">Sign In</button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about">
+              <Link to="/about" id="something-4">
                 About Us
                 <div className="parent-design hide">
                   <div className="design"></div>
                   <div className="design"></div>
                   <div className="design"></div>
                 </div>
+              </Link>
+            </li>
+            <li>
+              <Link to="/signIn" id="something-5">
+                <button className="btn-in">Sign In</button>
+              </Link>
+            </li>
+            <li>
+              <Link to="/register" id="something-6">
+                <button className="btn">Register</button>
               </Link>
             </li>
           </ul>

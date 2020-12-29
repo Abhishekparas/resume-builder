@@ -60,14 +60,14 @@ export const signup = (userDetails) => {
     let db = getFirestore();
     let uid;
 
-    firebase.auth().createUserWithEmailAndPassword(userDetails.email,userDetails.pw).then(obj => {
+    firebase.auth().createUserWithEmailAndPassword(userDetails.emailRegister,userDetails.pwRegister).then(obj => {
       // console.log(obj.user);
       // dispatch
       uid = obj.user.uid;
       return db.collection("users").doc(obj.user.uid).set({
         firstName : userDetails.fName,
         lastName : userDetails.lName,
-        email: userDetails.email
+        email: userDetails.emailRegister,
       })
 
     })
