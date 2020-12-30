@@ -98,7 +98,7 @@
 }
 
 
-#fName{
+#fname{
   height: 40px;
   border: none;
   background: #eee;
@@ -107,7 +107,7 @@
   font-size: 15px;
 }
 
-#lName{
+#lname{
 
   height: 40px;
   border: none;
@@ -160,6 +160,7 @@
   cursor: pointer;
   color: white;
   transition: transform 0.3s;
+  outline: none;
 }
 
 #forget{

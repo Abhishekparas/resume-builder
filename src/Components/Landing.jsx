@@ -26,9 +26,8 @@ class Landing extends Component {
                 <p id="p-tag">
                     Create a resume that perfectly describes your skills and match job
                     profile
-            </p>
-                {this.props.firebaseAuth.uid ? <button id="landing-btn" onClick={(e) => { this.getStartedHandler(e) }}>Get started for free</button>
-                    : <span>Loading........</span>}
+                </p>
+                <button id="landing-btn" onClick={(e) => { this.getStartedHandler(e) }}>Get started for free</button>
                 <div className="landing-img">
                     <img src="landing.png" alt="landing" />
                 </div>

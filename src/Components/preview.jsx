@@ -11,11 +11,11 @@ const Preview = (props) => {
   let skinCode = props.skinCode;
 
   return (
-    <React.Fragment>
+    <div className="preview">
       {skinCode == "skin1" && <Skin1 contact={props.contact} education={props.education}></Skin1>}
       {skinCode == "skin2" && <Skin2 contact={props.contact} education={props.education}></Skin2>}
       {skinCode == "skin4" && <Skin4 contact={props.contact} education={props.education}></Skin4>}
-    </React.Fragment>
+    </div>
   );
 };
 

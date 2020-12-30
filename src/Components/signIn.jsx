@@ -76,7 +76,7 @@ class Sign extends Component {
           <div className="form-div-2-content">
             <h1>Hello, Friend!</h1>
             <p>Enter your personal details and start building your resume</p>
-            <Link id="remove-under">
+            <Link id="remove-under" to="/register">
               <div id="ghost-1">SIGN UP</div>
             </Link>
           </div>

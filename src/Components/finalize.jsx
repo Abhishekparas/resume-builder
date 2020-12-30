@@ -5,6 +5,9 @@ import Preview from "./preview";
 import "./finalize.css";
 import { skinCodes } from "../constant/skinCodes";
 import { updateSkin } from "../actions/documentActions";
+import jsPDF from "jspdf"
+import { render } from 'react-dom';
+import { renderToString } from 'react-dom/server';
 
 class Finalize extends Component {
   state = {
@@ -16,6 +19,13 @@ class Finalize extends Component {
   
   handleSkinSelect = (value) => {
     this.props.changeSkinCode(value);
+  }
+
+  downloadHandler = (e) => {
+    const str = renderToString(Preview);
+    const pdf = new jsPDF("p", "mm", "a4");
+    pdf.fromHTML(str);
+    pdf.save('pdf');
   }
 
   componentWillReceiveProps(newProps){
@@ -32,6 +42,7 @@ class Finalize extends Component {
           <div className="final-preview">
             <Preview contact={contact} education={education}></Preview>
           </div>
+          <button id="download" onClick={(e) => {this.downloadHandler(e)}}> <img src="cloud-computing.png" alt=""/></button>
 
           <div className="finalize-img">
             {skinCodes.map((skin) => {

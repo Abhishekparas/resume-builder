@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./contact.css";
 import Preview from "./preview";
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import { updateContact } from "../actions/contactActions";
 import { compose } from "redux";
 import { firestoreConnect } from "react-redux-firebase";
@@ -29,17 +29,17 @@ class Contact extends Component {
     this.props.history.push("/education");
   };
 
-  componentDidMount(){
+  componentDidMount() {
     console.log(`Inside component did mount`);
     console.log(this.props);
   }
 
-  componentDidUpdate(){
+  componentDidUpdate() {
     console.log(`Inside component did update`);
     console.log(this.props);
   }
 
-  componentWillReceiveProps(newProps){
+  componentWillReceiveProps(newProps) {
     console.log(`Inside component will receive props`);
     console.log(newProps);
     console.log(this.props);
@@ -55,7 +55,7 @@ class Contact extends Component {
           </div>
           <div className="contact-form-details">
             <div className="input-group">
-              <label htmlFor="fName">First Name</label>
+              <label htmlFor="fName" className="change-color">First Name</label>
               <input
                 type="text"
                 id="fName"
@@ -64,7 +64,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="lName">Last Name</label>
+              <label htmlFor="lName" className="change-color">Last Name</label>
               <input
                 type="text"
                 id="lName"
@@ -73,7 +73,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group extend">
-              <label htmlFor="professionalSummary">Professional Summary</label>
+              <label htmlFor="professionalSummary" className="change-color">Professional Summary</label>
               <input
                 type="text"
                 id="professionalSummary"
@@ -82,7 +82,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="Email">Email</label>
+              <label htmlFor="Email" className="change-color">Email</label>
               <input
                 type="text"
                 id="Email"
@@ -91,7 +91,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="phone">Phone</label>
+              <label htmlFor="phone" className="change-color">Phone</label>
               <input
                 type="text"
                 id="phone"
@@ -100,7 +100,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="profession">Profession</label>
+              <label htmlFor="profession" className="change-color">Profession</label>
               <input
                 type="text"
                 id="profession"
@@ -109,7 +109,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="street">Street</label>
+              <label htmlFor="street" className="change-color">Street</label>
               <input
                 type="text"
                 id="street"
@@ -118,7 +118,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="city">City</label>
+              <label htmlFor="city" className="change-color">City</label>
               <input
                 type="text"
                 id="city"
@@ -127,7 +127,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="state">State</label>
+              <label htmlFor="state" className="change-color">State</label>
               <input
                 type="text"
                 id="state"
@@ -136,7 +136,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="country">Country</label>
+              <label htmlFor="country" className="change-color">Country</label>
               <input
                 type="text"
                 id="country"
@@ -145,7 +145,7 @@ class Contact extends Component {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="pincode">Pincode</label>
+              <label htmlFor="pincode" className="change-color">Pincode</label>
               <input
                 type="text"
                 id="pincode"
@@ -153,18 +153,20 @@ class Contact extends Component {
                 onChange={(e) => this.onChangeHandler(e)}
               />
             </div>
-            <div className="next extend">
-              <button
-                className="btn-next"
-                onClick={this.onSubmitContactHandler}
-              >
-                Next
+            <div className="buttons-div">
+              <div className="back">
+                <Link to="/templates">
+                  <button className="btn-back"><i class="fas fa-arrow-left"></i>Back</button>
+                </Link>
+              </div>
+              <div className="next">
+                <button
+                  className="btn"
+                  onClick={this.onSubmitContactHandler}
+                >
+                  Next<i class="fas fa-arrow-right"></i>
               </button>
-            </div>
-            <div className="back extend">
-              <Link to="/templates">
-                <button className="btn-back">Back</button>
-              </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -178,14 +180,14 @@ class Contact extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    contact : state.contactDetails,
-    education : state.educationDetails
+    contact: state.contactDetails,
+    education: state.educationDetails
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
-    updateContactDetails : (contactDetails) => {dispatch(updateContact(contactDetails))}
+  return {
+    updateContactDetails: (contactDetails) => { dispatch(updateContact(contactDetails)) }
   }
 }
 
@@ -193,4 +195,4 @@ const mapDispatchToProps = (dispatch) => {
 
 
 
-export default compose(connect(mapStateToProps,mapDispatchToProps),firestoreConnect([{collection : "resumes"}]))(Contact);
+export default compose(connect(mapStateToProps, mapDispatchToProps), firestoreConnect([{ collection: "resumes" }]))(Contact);

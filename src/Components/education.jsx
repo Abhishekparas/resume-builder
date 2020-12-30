@@ -16,9 +16,9 @@ class Education extends Component {
     let value = e.target.value;
     let id = e.target.id;
     this.setState({
-      education : {
+      education: {
         ...this.state.education,
-        [id] : value
+        [id]: value
       }
     })
   };
@@ -38,7 +38,7 @@ class Education extends Component {
 
           <div className="input-group-div">
             <div className="input-group-education">
-              <label htmlFor="">College Name</label>
+              <label htmlFor="" className="change-color">College Name</label>
               <input
                 type="text"
                 id="collegeName"
@@ -48,7 +48,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education">
-              <label htmlFor="">Degree</label>
+              <label htmlFor="" className="change-color" >Degree</label>
               <input
                 type="text"
                 id="degree"
@@ -58,7 +58,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education">
-              <label htmlFor="">CGPA</label>
+              <label htmlFor="" className="change-color">CGPA</label>
               <input
                 type="text"
                 id="cgpa"
@@ -68,7 +68,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education">
-              <label htmlFor="">City</label>
+              <label htmlFor="" className="change-color">City</label>
               <input
                 type="text"
                 id="eduCity"
@@ -78,7 +78,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education">
-              <label htmlFor="">State</label>
+              <label htmlFor="" className="change-color">State</label>
               <input
                 type="text"
                 id="eduState"
@@ -88,7 +88,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education">
-              <label htmlFor="">Graduation Month</label>
+              <label htmlFor="" className="change-color">Graduation Month</label>
               <input
                 type="text"
                 id="graduationMonth"
@@ -98,7 +98,7 @@ class Education extends Component {
             </div>
 
             <div className="input-group-education extend">
-              <label htmlFor="">Graduation Year</label>
+              <label htmlFor="" className="change-color">Graduation Year</label>
               <input
                 type="text"
                 id="graduationYear"
@@ -106,21 +106,19 @@ class Education extends Component {
                 onChange={(e) => this.onChangeHandler(e)}
               />
             </div>
-
-            <div className="next-btn extend">
-                <button onClick={this.onSubmitHandler}>Next</button>
-            </div>
-            <div className="back-btn extend">
-              <Link to="/contact">
-                <button>Back</button>
-              </Link>
+            <div className="buttons-div">
+              <div className="back-btn">
+                <Link to="/contact">
+                  <button><i class="fas fa-arrow-left"></i>Back</button>
+                </Link>
+              </div>
+              <div className="next-btn">
+                <button onClick={this.onSubmitHandler}>Next<i class="fas fa-arrow-right"></i></button>
+              </div>
             </div>
           </div>
         </div>
         <div className="preview-form">
-          <div className="preview-heading">
-            <h1>Preview</h1>
-          </div>
           <Preview contact={contact} education={education}></Preview>
         </div>
       </div>
@@ -136,9 +134,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
-    updateEducationDetails : (educationDetails) => {dispatch(updateEducation(educationDetails))}
+  return {
+    updateEducationDetails: (educationDetails) => { dispatch(updateEducation(educationDetails)) }
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Education);
+export default connect(mapStateToProps, mapDispatchToProps)(Education);

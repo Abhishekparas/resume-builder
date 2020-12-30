@@ -6,8 +6,8 @@ import "./Register.css";
 
 class Register extends Component {
   state = {
-    fName: "",
-    lName: "",
+    fname: "",
+    lname: "",
     emailRegister: "",
     pwRegister: "",
   };
@@ -43,11 +43,11 @@ class Register extends Component {
             <h1 id="heading">Create Account</h1>
 
             <div className="email-div-register">
-              <input type="text" id="fName" placeholder="First Name" value={this.state.fName} onChange = {(e) => {this.onChangeHandler(e)}}/>
+              <input type="text" id="fname" placeholder="First Name" value={this.state.fName} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
 
             <div className="email-div-register">
-              <input type="text" id="lName" placeholder="Last Name" value={this.state.lName} onChange = {(e) => {this.onChangeHandler(e)}}/>
+              <input type="text" id="lname" placeholder="Last Name" value={this.state.lName} onChange = {(e) => {this.onChangeHandler(e)}}/>
             </div>
 
             <div className="email-div-register">

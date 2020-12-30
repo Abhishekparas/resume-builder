@@ -1,0 +1,13 @@
+.input-elements{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+#firstSkill{
+  margin-top: 50px;
+}
+
+#secondSkill{
+  margin-top: 50px;
+}

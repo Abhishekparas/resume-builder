@@ -9,7 +9,7 @@ import { logout } from "../actions/authActions";
 
 const handleLogout = (logout) => {
   // auth.signOut().then( () => {
-    logout();
+  logout();
   // })
 }
 
@@ -26,60 +26,58 @@ const Header = (props) => {
         {auth.uid ? (
           <ul id="list-links">
             <li>
-              <Link to="/templates" id="something-1">
+              <Link to="/templates" >
                 Resume Templates
-                <div className="parent-design hide">
+                {/* <div className="parent-design hide">
                   <div className="design"></div>
                   <div className="design"></div>
                   <div className="design"></div>
-                </div>
+                </div> */}
               </Link>
             </li>
             <li>
-              <Link to="/about" id="something-2">
+              <Link to="/about" >
                 About Us
-                <div className="parent-design hide">
+                {/* <div className="parent-design hide">
                   <div className="design"></div>
                   <div className="design"></div>
                   <div className="design"></div>
-                </div>
+                </div> */}
               </Link>
             </li>
             <li>
-              <Link to="/" onClick = {() => {handleLogout(props.logout)}} id="something-3">
+              <Link to="/" onClick={() => { handleLogout(props.logout) }} >
                 Logout
-                <div className="parent-design hide">
+                {/* <div className="parent-design hide">
                   <div className="design"></div>
                   <div className="design"></div>
                   <div className="design"></div>
-                </div>
+                </div> */}
               </Link>
             </li>
           </ul>
         ) : (
-          <ul id="list-links-2">
-            <li>
-              <Link to="/about" id="something-4">
-                About Us
-                <div className="parent-design hide">
-                  <div className="design"></div>
-                  <div className="design"></div>
-                  <div className="design"></div>
-                </div>
+            <ul id="list-links-2">
+              <li>
+                <Link to="/about">
+                  About Us
               </Link>
-            </li>
-            <li>
-              <Link to="/signIn" id="something-5">
-                <button className="btn-in">Sign In</button>
-              </Link>
-            </li>
-            <li>
-              <Link to="/register" id="something-6">
-                <button className="btn">Register</button>
-              </Link>
-            </li>
-          </ul>
-        )}
+              </li>
+              <div className="something">
+                <li>
+                  <Link to="/signIn" >
+                    <button className="btn-in">Sign In</button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/register" >
+                    <button className="btn">Register</button>
+                  </Link>
+                </li>
+
+              </div>
+            </ul>
+          )}
       </div>
     </div>
   );
@@ -93,8 +91,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    logout : () => {dispatch(logout())}
+    logout: () => { dispatch(logout()) }
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -6,8 +6,12 @@
 }
 
 .education-1{
+
     width: 45%;
-    box-shadow: 0 2px 9px rgba(19, 252, 3, 0.95);
+    /* box-shadow: 0 2px 9px rgba(19, 252, 3, 0.95); */
+    background: white;
+    border: 2px solid lightgray;
+    border-radius: 5px;
 }
 
 .input-group-div{
@@ -18,11 +22,12 @@
 }
 
 .preview-form{
-    width: 45%;
+    /* width: 45%; */
 }
 
 .education-heading{
     text-align: center;
+    color: #FF4B2B;
 }
 
 .input-group-education{
@@ -34,13 +39,16 @@
 }
 
 .input-group-education input{
+
     height: 40px;
     border: none;
-    background: #D1FFC3;
+    background: #eee;
     outline: none;
     border-radius: 3px;
     font-size: 20px;
     font-weight: 500;
+    /* color: rgb(137,137,137); */
+    color: #2c3e50;
 }
 
 .extend{
@@ -52,16 +60,17 @@
 }
 
 .next-btn button{
-    width: 100%;
+
+    width: 100px;
     border: none;
     outline: none;
-    background: lightgreen;
+    background: #ff4b2b;
     border-radius: 5px;
     /* height: 30px; */
     cursor: pointer;
     padding: 8px;
     font-size: 20px;
-    color: darkgreen;
+    color: white;
 }
 
 .back-btn{
@@ -69,29 +78,36 @@
 }
 
 .back-btn button{
-    width: 100%;
+
+    width: 100px;
     border: none;
     outline: none;
     /* background: lightgreen; */
-    border: 2px solid lightgreen;
+    /* border: 2px solid lightgreen; */
+    border: 1px solid lightgray;
     border-radius: 5px;
     /* height: 30px; */
     cursor: pointer;
     padding: 8px;
     font-size: 20px;
-    background: transparent;
-    color: green;
+    background: #F9F9F9;
+    color: black;
 }
 
 .back-btn button:hover{
-    background: lightgreen;
-    color: black;
+    /* background: lightgreen; */
+    /* color: black; */
     transition: all .4s ease;
 
 }
 
 .next-btn button:hover{
-    color: black;
+    /* color: black; */
     transition: all .4s ease;
+}
 
+.buttons-div{
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
 }

@@ -65,8 +65,8 @@ export const signup = (userDetails) => {
       // dispatch
       uid = obj.user.uid;
       return db.collection("users").doc(obj.user.uid).set({
-        firstName : userDetails.fName,
-        lastName : userDetails.lName,
+        firstName : userDetails.fname,
+        lastName : userDetails.lname,
         email: userDetails.emailRegister,
       })
 

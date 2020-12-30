@@ -139,6 +139,7 @@
   cursor: pointer;
   color: white;
   transition: transform 0.3s;
+  outline: none;
 }
 
 #forget{

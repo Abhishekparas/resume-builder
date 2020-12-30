@@ -1,0 +1,8 @@
+.preview{
+  background: white;  
+  /* box-shadow: 0 2px 9px #FF4B2B;  */
+  border: 2px solid #FF4B2B;
+  border-radius: 3px;
+  height: 870px;
+  width: 610px;
+}

@@ -6,7 +6,7 @@
 
 .final-preview {
   width: 605px;
-  height: 1000px;
+  /* height: px; */
   /* background: orange; */
   margin-top: 50px;
   margin-left: 370px;
@@ -14,9 +14,20 @@
 }
 .finalize-img {
   display: flex;
-  margin-left: 70px;
+  margin-left: 40px;
   flex-wrap: wrap;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
   /* background: limegreen; */
   width: 1300px;
+}
+
+#download{
+  width: 100px;
+  margin-left: 630px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  /* text-decoration: none; */
+  background:  #F6F5F7;
+  cursor: pointer;
 }

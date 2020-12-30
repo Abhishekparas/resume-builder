@@ -13,6 +13,7 @@ import Template from './Components/Templates';
 import Skin2  from './Components/skins/skin2';
 import Skin1 from './Components/skins/skin1';
 import { connect } from 'react-redux';
+import Test from './Components/test';
 
 
 function App(props) {
@@ -32,6 +33,7 @@ function App(props) {
         {/* <Route path="/skin" exact>
           <Skin1></Skin1> 
         </Route> */}
+        <Route path="/test" exact component={Test}></Route>
       </Switch>
 
     </React.Fragment>
