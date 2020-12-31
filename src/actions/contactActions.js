@@ -1,5 +1,6 @@
 export const updateContact = (contactDetails) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
+    console.log(getState()); ;
     let db = getFirestore();
     let uid = getState().firebase.auth.uid;
     db.collection("resumes").doc(uid).set({

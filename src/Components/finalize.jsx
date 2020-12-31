@@ -5,9 +5,9 @@ import Preview from "./preview";
 import "./finalize.css";
 import { skinCodes } from "../constant/skinCodes";
 import { updateSkin } from "../actions/documentActions";
-import jsPDF from "jspdf"
-import { render } from 'react-dom';
-import { renderToString } from 'react-dom/server';
+import Pdf from "react-to-pdf";
+
+const ref = React.createRef();
 
 class Finalize extends Component {
   state = {
@@ -16,33 +16,36 @@ class Finalize extends Component {
     skinCode: this.props.skinCode,
   };
 
-  
+
   handleSkinSelect = (value) => {
     this.props.changeSkinCode(value);
   }
 
-  downloadHandler = (e) => {
-    const str = renderToString(Preview);
-    const pdf = new jsPDF("p", "mm", "a4");
-    pdf.fromHTML(str);
-    pdf.save('pdf');
-  }
+  // downloadHandler = (e) => {
+  //   const str = renderToString(Preview);
+  //   const pdf = new jsPDF("p", "mm", "a4");
+  //   pdf.fromHTML(str);
+  //   pdf.save('pdf');
+  // }
 
-  componentWillReceiveProps(newProps){
+  componentWillReceiveProps(newProps) {
     this.setState({
-      skinCode : newProps.skinCode
+      skinCode: newProps.skinCode
     })
   }
 
   render() {
-    let { contact, education,skinCode } = this.state;
+    let { contact, education, skinCode } = this.state;
     return (
       <React.Fragment>
         <div className="finalize">
           <div className="final-preview">
-            <Preview contact={contact} education={education}></Preview>
+            <Preview contact={contact} education={education} ref={ref}></Preview>
           </div>
-          <button id="download" onClick={(e) => {this.downloadHandler(e)}}> <img src="cloud-computing.png" alt=""/></button>
+          <Pdf targetRef={ref} filename="resume.pdf">
+            {({ toPdf }) =><button id="download" onClick={toPdf}> <img src="cloud-computing.png" alt="" /></button> }
+          </Pdf>
+          {/* <button id="download" onClick={(e) => { this.downloadHandler(e) }}> <img src="cloud-computing.png" alt="" /></button> */}
 
           <div className="finalize-img">
             {skinCodes.map((skin) => {
@@ -75,9 +78,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return{
-    changeSkinCode : (skinCode) => {dispatch(updateSkin(skinCode))}
+  return {
+    changeSkinCode: (skinCode) => { dispatch(updateSkin(skinCode)) }
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Finalize);
+export default connect(mapStateToProps, mapDispatchToProps)(Finalize);
