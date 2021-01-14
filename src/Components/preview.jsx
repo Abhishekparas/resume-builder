@@ -20,8 +20,8 @@ const Preview = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return{
-    skinCode : state.document.skinCode
+  return {
+    skinCode: state.document.skinCode
   }
 }
 

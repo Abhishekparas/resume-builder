@@ -165,7 +165,7 @@ class Contact extends Component {
                   onClick={this.onSubmitContactHandler}
                 >
                   Next<i class="fas fa-arrow-right"></i>
-              </button>
+                </button>
               </div>
             </div>
           </div>
